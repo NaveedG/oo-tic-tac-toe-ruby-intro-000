@@ -63,13 +63,13 @@ class TicTacToe
     position = input_to_index(user_input)
     token = current_player
 
-  if valid_move?(position)
-    move(position, token)
-    display_board
-  else
-    turn
+    if valid_move?(position)
+      move(position, token)
+      display_board
+    else
+      turn
+    end
   end
-end
 
   def won?
     WIN_COMBINATIONS.each do |combo|
@@ -91,7 +91,7 @@ end
     return false
   end
 
-def full?(board)
+  def full?(board)
   board.all? do |position|
     position == "X" || position == "O"
   end
