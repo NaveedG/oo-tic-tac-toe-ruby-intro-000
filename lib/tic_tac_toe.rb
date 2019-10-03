@@ -28,7 +28,9 @@ class TicTacToe
   end
 
   def move(position, token)
-    @board[position] = @token
+    @position = position
+    @token = token
+    @board[@position] = @token
   end
 
 end
