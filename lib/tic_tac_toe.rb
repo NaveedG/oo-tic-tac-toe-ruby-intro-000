@@ -41,18 +41,12 @@ class TicTacToe
     return true if position.between?(0, 8) && !position_taken?(position)
   end
 
-  def turn
-    puts "Please enter 1-9:"
-    user_input = gets.strip
-    position = input_to_index(user_input)
-
-    if valid_move?(position)
-      move(position)
-      display_board(@board)
-    else
-      turn
-    end
-
+  def turn_count
+  turn = 0
+  @board.each do |position|
+    turn += 1 if position != " "
+  end
+  return turn
 end
 
 
