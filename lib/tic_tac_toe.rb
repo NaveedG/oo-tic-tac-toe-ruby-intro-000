@@ -128,4 +128,14 @@ class TicTacToe
     end
   end
 
+  def play
+    until over?
+      turn
+      current_player
+    end
+    puts "Congratulations X!" if won? && winner == "X"
+    puts "Congratulations O!" if won? && winner == "O"
+    puts "Cat's Game!" if draw?
+  end
+
 end
