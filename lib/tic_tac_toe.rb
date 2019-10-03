@@ -27,13 +27,12 @@ class TicTacToe
     @user_input = user_input.to_i - 1
   end
 
-  def move(position, token)
+  def move(position)
     @position = position
-    @board[@position] = token
-    @token = token
+    @board[@position] = @token
   end
 
-  def position_taken?
+  def position_taken?(token)
     return false if @token == " " || @token == "" || @token == nil
     return true if !(@token == " " || @token == "" || @token == nil)
   end
