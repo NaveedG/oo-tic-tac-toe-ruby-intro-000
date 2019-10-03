@@ -37,8 +37,8 @@ class TicTacToe
     return true if !(@board[position] == " " || @board[position] == "" || @board[position] == nil)
   end
 
-  def valid_move?(board= @board, position)
-    return true if position.between?(0, 8) && !position_taken?(board, position)
+  def valid_move?(position)
+    return true if position.between?(0, 8) && !position_taken?(@board, position)
   end
 
 
