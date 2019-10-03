@@ -30,10 +30,10 @@ class TicTacToe
   def move(position, token)
     @position = position
     @token = token
-    @board[@position] = @token
   end
 
   def position_taken?
+    @board[@position] = @token
     return false if @token == " " || @token == "" || @token == nil
     return true if !(@token == " " || @token == "" || @token == nil)
   end
