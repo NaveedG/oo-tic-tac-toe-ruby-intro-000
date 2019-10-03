@@ -34,8 +34,8 @@ class TicTacToe
 
   def position_taken?(token)
     @token = token
-    return false if token == " " || token == "" || token == nil
-    return true if !(token == " " || token == "" || token == nil)
+    return false if @token == " " || @token == "" || @token == nil
+    return true if !(@token == " " || @token == "" || @token == nil)
   end
 
 
